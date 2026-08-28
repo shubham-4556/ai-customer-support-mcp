@@ -3,8 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
+    "dev": "concurrently -n \"web,api,mcp\" -c \"cyan,magenta,yellow\" \"npm --prefix apps/web run dev\" \"npm --prefix apps/api run dev\" \"npm --prefix apps/mcp run dev\"",
     "dev:web": "npm --prefix apps/web run dev",
     "dev:api": "npm --prefix apps/api run dev",
     "dev:mcp": "npm --prefix apps/mcp run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
