@@ -1,0 +1,10 @@
+{
+  "name": "ai-customer-support-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:api": "npm --prefix apps/api run dev",
+    "dev:mcp": "npm --prefix apps/mcp run dev"
+  }
+}
