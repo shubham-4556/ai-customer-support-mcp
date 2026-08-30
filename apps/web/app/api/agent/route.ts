@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     }
 
     const lowercaseMsg = message.toLowerCase();
-    const steps: Array<{ type: "thought" | "tool_call" | "tool_result"; content: string; toolName?: string; params?: any; result?: any }> = [];
+    const steps: Array<{ type: "thought" | "tool_call" | "tool_result"; content?: string; toolName?: string; params?: any; result?: any }> = [];
 
     // Analyze intent and map to MCP Tools
     if (lowercaseMsg.includes("order") || lowercaseMsg.includes("ord-") || lowercaseMsg.includes("track") || lowercaseMsg.includes("ship")) {

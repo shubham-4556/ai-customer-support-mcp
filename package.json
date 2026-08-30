@@ -6,7 +6,11 @@
     "dev": "concurrently -n \"web,api,mcp\" -c \"cyan,magenta,yellow\" \"npm --prefix apps/web run dev\" \"npm --prefix apps/api run dev\" \"npm --prefix apps/mcp run dev\"",
     "dev:web": "npm --prefix apps/web run dev",
     "dev:api": "npm --prefix apps/api run dev",
-    "dev:mcp": "npm --prefix apps/mcp run dev"
+    "dev:mcp": "npm --prefix apps/mcp run dev",
+    "build": "npm run build:web && npm run build:api && npm run build:mcp",
+    "build:web": "npm --prefix apps/web run build",
+    "build:api": "npm --prefix apps/api run build",
+    "build:mcp": "npm --prefix apps/mcp run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
