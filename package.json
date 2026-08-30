@@ -2,6 +2,10 @@
   "name": "ai-customer-support-mcp",
   "private": true,
   "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "concurrently -n \"web,api,mcp\" -c \"cyan,magenta,yellow\" \"npm --prefix apps/web run dev\" \"npm --prefix apps/api run dev\" \"npm --prefix apps/mcp run dev\"",
     "dev:web": "npm --prefix apps/web run dev",
