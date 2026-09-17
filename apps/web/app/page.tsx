@@ -7,7 +7,7 @@ import { TicketManager } from "../components/TicketManager";
 import { McpConsole } from "../components/McpConsole";
 import { ArchitectureDiagram } from "../components/ArchitectureDiagram";
 import { Footer } from "../components/Footer";
-import { Bot, Ticket, Terminal, Sparkles, Zap, ShieldCheck, ArrowRight } from "lucide-react";
+import { Sparkles, Zap, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"agent" | "tickets" | "mcp" | "architecture">("agent");

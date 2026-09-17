@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "AI Customer Support | Model Context Protocol (MCP) Dashboard",
@@ -26,7 +27,9 @@ export default function RootLayout({
           <div className="pointer-events-none absolute top-1/3 -left-40 w-[600px] h-[600px] bg-cyan-600/10 blur-[140px] rounded-full" />
           <div className="pointer-events-none absolute bottom-10 -right-40 w-[600px] h-[600px] bg-emerald-600/10 blur-[140px] rounded-full" />
 
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </div>
       </body>
     </html>
